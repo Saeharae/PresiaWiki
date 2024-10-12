@@ -7,8 +7,8 @@
 프레시아 위키 엔진은 Node.js 기반의 환경에서 Next.js 프레임워크를 사용하며, Vercel에서의 구동을 전제하고 있습니다.
 
 ### 필요한 패키지
-1. Next.js (14.2.15 기준)
-2. Styled-Component
+1. TypeScript용 Next.js (14.2.15 기준)(ESLint: Yes, Tailwind CSS: No, src directory: Yes, App Router: Yes, import alias: No)
+2. TypeScript용 Styled-Component
    
 ### 개발
 1. [Node.js](https://nodejs.org/en) 를 다운로드 하여 설치합니다. (20.14.0 버전 기준)
