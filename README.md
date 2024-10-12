@@ -7,5 +7,6 @@
 ## 참고
 * Node.js 버전: 20.14.0
 * Next.js 버전: 14.2.15
+* Styled-Component 사용
 
 작성 중...
