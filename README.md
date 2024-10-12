@@ -14,6 +14,6 @@
 * Next.js 버전: 14.2.15
 * Styled-Component 사용
 * NPM(Node Package Manager) 사용
-* Posrgre(Vercel 제공) 데이터베이스 사용
+* Postgre(Vercel 제공) 데이터베이스 사용
 
 작성 중...
