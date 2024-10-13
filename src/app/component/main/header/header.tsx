@@ -1,14 +1,11 @@
 "use client";
-import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-export const Headerr = styled.div<{ scrolled: boolean }>`
+export const Headerr = styled.div`
     position: fixed;
+    top: 0;
     height: 70px;
-    background-color: rgba(255, 255, 255, 0.25);
-    transition: .1s all;
     background-color: #0EB4FC;
-    z-index: 2;
 `;
 
 export const HeaderTle = styled.div`
@@ -40,7 +37,7 @@ export const MobileMenuBtn = styled.img`
     }
 `;
 
-export const NavLeft = styled.nav<{ scrolled: boolean }>`
+export const NavLeft = styled.nav`
     position: absolute;
     top: 50%;
     left: 13%;
@@ -53,7 +50,7 @@ export const NavLeft = styled.nav<{ scrolled: boolean }>`
     }
 `;
 
-export const NavRight = styled.nav<{ scrolled: boolean }>`
+export const NavRight = styled.nav`
     position: absolute;
     top: 50%;
     right: 13%;
@@ -128,38 +125,22 @@ export const Search = styled.input`
 `;
 
 function Header() {
-    const [scrolled, setScrolled] = useState<boolean>(false);
-    const handleScroll = () => {
-        if (window.scrollY > 1) {
-            setScrolled(true);
-        } else {
-            setScrolled(false);
-        }
-    };
-
     function noalert() {
         alert('열심히 만들고 있어요..! 잠시만 기다려 주세요!');
     }
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
     return (
         <header>
-            <Headerr scrolled={scrolled}>
+            <Headerr>
                 <HeaderTle>
-                    <NavLeft scrolled={scrolled}>
+                    <NavLeft>
                         <HeaderLogo src={`/img/Logo.png`} alt="로고이미지" />
                         <UlLeft>
                             <LiLeft onClick={noalert}>최근 변경</LiLeft>
                         </UlLeft>
                     </NavLeft>
-                    <NavRight scrolled={scrolled}>
-                        <MobileMenuBtn src={`/img/icons/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png`} alt="로고이미지" />
+                    <NavRight>
+                        {/* <MobileMenuBtn src={`/img/icons/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png`} alt="로고이미지" /> */}
                         <UlRight>
                             <form>
                                 <Search
